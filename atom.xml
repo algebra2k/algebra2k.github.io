@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+    <title type="text">jackson</title>
+    <subtitle type="html"></subtitle>
+    <updated>2021-12-23T15:16:05&#43;08:00</updated>
+    <id>https://algebra2k.github.io/</id>
+    <link rel="alternate" type="text/html" href="https://algebra2k.github.io/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://algebra2k.github.io/atom.xml" />
+    <author>
+            <name>jackson</name>
+            <uri>https://algebra2k.github.io/</uri>
+            
+                <email>jackson.cloudnative@gmail.com</email>
+            </author>
+    <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
+    <generator uri="https://gohugo.io/" version="0.91.0">Hugo</generator>
+        <entry>
+            <title type="text">1.2 Relations</title>
+            <link rel="alternate" type="text/html" href="https://algebra2k.github.io/teachs/a-course-in-discrete-structures/1-2-relational/" />
+            <id>https://algebra2k.github.io/teachs/a-course-in-discrete-structures/1-2-relational/</id>
+            <updated>2021-12-23T14:20:30&#43;08:00</updated>
+            <published>2020-03-02T00:00:00&#43;00:00</published>
+            <author>
+                    <name>jackson</name>
+                    <uri>https://algebra2k.github.io/</uri>
+                    <email>jackson.cloudnative@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">定义 1.12 (Relations 关系). 集合 $S$ 和 $T$ 上的关系是 $S \times\ T$ 的子集. 单个集合 $S$ 上的关系是 $S \times S$ 的子集.……</summary>
+            
+                <content type="html">&lt;p&gt;&lt;strong&gt;定义 1.12&lt;/strong&gt; (Relations 关系). 集合 $S$ 和 $T$ 上的关系是 $S \times\ T$ 的子集. 单个集合 $S$ 上的关系是 $S \times S$ 的子集.&lt;/p&gt;
+&lt;p&gt;**例 1.13. &amp;quot;&lt;strong&gt;Taller-than&lt;/strong&gt;&amp;quot;**是人的关系； $(A, B) \in \text{&amp;quot;Taller-than&amp;quot;}$  如果人 $A$ 比人 $B$ 高。$&amp;quot;\ge&amp;quot;$ 是 $R$ 上的 &lt;strong&gt;relation&lt;/strong&gt;； $“\ge”= \lbrace(x, y) | x, y \in R, x ≥ y\rbrace$。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.14.&lt;/strong&gt; (Reflexitivity, symmetry, and transitivity 自反性、对称性和传递性). 集合 $S$ 上的关系 $R$ 是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Reflexive&lt;/em&gt; if $(x, x) \in R$ for all x ∈ S.&lt;/li&gt;
+&lt;li&gt;Symmetric if whenever $(x, y) \in R, (y, x) \in R$.&lt;/li&gt;
+&lt;li&gt;Transitive if whenever $(x, y),(y, z) \in R$, then $(x, z) \in R$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;例 1.15.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$“≤”$ 是自反的, 但 $“&amp;lt;”$ 不是.&lt;/li&gt;
+&lt;li&gt;“sibling-of”是对称的，但 $“≤”$ 和 “sister-of” 不是。&lt;/li&gt;
+&lt;li&gt;“sibling-of”、$“≤”$ 和 $“&amp;lt;”$ 都是可传递的，但“parent-of”不是
+（然而，“祖先的”是可传递的）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.16 (Graph of relations).&lt;/strong&gt; $S$ 上的关系 $R$ 的图是一个有向图，其节点对应于 $S$ 的元素。当且仅当 $(x, y) \in R$，从节点 $x$ 到 $y$ 存在边。见图 1.2。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定理 1.17.&lt;/strong&gt; 设 $R$ 是 $S$ 上的一个关系.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$R$ &lt;em&gt;is reflexive iff its graph has a self-loop on every node.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;R &lt;em&gt;is symmetric iff in its graph, every edge goes both ways.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;$R$ is transitive iff in its graph, for any three nodes  $x, y$ and $z$ such that there is an edge from $x \to y$ and from $y \to z$, there exist an edge from $x \to z$.&lt;/li&gt;
+&lt;li&gt;More naturally, $R$ is transitive iff in its graph, whenever there is a path from node $x$ to node $y$, there is also a direct edge from $x$ to $y$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;证明.&lt;/strong&gt; 前三部分的证明直接来自定义. 最后一个的证明依赖于归纳;  我们稍后会重新审视它.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.18 (Transitive closure 传递闭包).&lt;/strong&gt; 关系 $ R $ 的传递闭包是least（即 smallest）传递关系 $ R^* $ 使得 $ R \subseteq R^* $.&lt;/p&gt;
+&lt;p&gt;从图上看，$ R^* $ 是连通性关系: 如果在 R 的图中存在从 $ x \to y $ 的路径，则 $ (x, y) \in R^* $ 。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例 1.19.&lt;/strong&gt; 让 $ R = \lbrace(1, 2),(2, 3),(1, 4)\rbrace $ 是一个关系 (比如在集合 $Z$ 上). 然后 $ (1, 3) \in R^* $ (因为 $ (1, 2),(2, 3) \in R) $，但是 $ (2, 4)\notin  R^* $ 。 见图 1.2。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0fa39a49-7e65-48d0-a8a6-928c102c7a75/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210915%2Fus-west-2%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210915T145558Z&amp;amp;X-Amz-Expires=86400&amp;amp;X-Amz-Signature=f4d5a25a7ee87eda6e6ecf17ac330a76045417e146ca739184be164e33936b17&amp;amp;X-Amz-SignedHeaders=host&amp;amp;response-content-disposition=filename%20%3D%22Untitled.png%22&#34; alt=&#34;图1.2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定理 1.20.&lt;/strong&gt; A relation R is transitive iff $R = R^*$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.21 (Equivalence relations 等价关系).&lt;/strong&gt; 集合 $S$ 上的关系 $R$ 是等价关系, 如果它是自反的、对称的和可传递的.&lt;/p&gt;
+&lt;p&gt;等价关系体现了“being the same”或“equal”的概念。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例 1.22.&lt;/strong&gt; 以下是等价关系：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Equality, “=”, a relation on numbers (say $N or R$)&lt;/li&gt;
+&lt;li&gt;$Parity = \lbrace(x, y) | x, y \text{ are both even or are both odd}\rbrace$ a relation on integers&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://algebra2k.github.io/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" term="离散数学" label="离散数学" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">1.1 Sets</title>
+            <link rel="alternate" type="text/html" href="https://algebra2k.github.io/teachs/a-course-in-discrete-structures/1-1-sets/" />
+            <id>https://algebra2k.github.io/teachs/a-course-in-discrete-structures/1-1-sets/</id>
+            <updated>2021-12-23T14:21:10&#43;08:00</updated>
+            <published>2020-03-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>jackson</name>
+                    <uri>https://algebra2k.github.io/</uri>
+                    <email>jackson.cloudnative@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">“幸福的人不是处于特定环境中的人，而是具有特定态度的人。” — 休·唐斯 集合是数学中最基……</summary>
+            
+                <content type="html">&lt;p&gt;“幸福的人不是处于特定环境中的人，而是具有特定态度的人。” — 休·唐斯&lt;/p&gt;
+&lt;p&gt;集合是数学中最基本的对象之一。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.1 (集合，非正式l).&lt;/strong&gt;  集合是对象的无序集合。&lt;/p&gt;
+&lt;p&gt;我们的定义是非正式的，因为我们没有定义“集合”是什么； 对集合的深入研究超出了本课程的范围。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例 1.2.&lt;/strong&gt; 以下符号均指同一个集合：&lt;/p&gt;
+&lt;p&gt;$\lbrace1, 2\rbrace, \lbrace2, 1\rbrace, \lbrace1, 2, 1, 2\rbrace, \lbrace x | x \text{ is an integer}, 1 \le x \le &amp;lt; 2\rbrace$&lt;/p&gt;
+&lt;p&gt;在整个课程中，我们将遇到以下集合和符号：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\emptyset$, 空集&lt;/li&gt;
+&lt;li&gt;$N = {0,1,2,3...}$, 非负整数集&lt;/li&gt;
+&lt;li&gt;$N^+ = {1,2,3...}$, 正整数集&lt;/li&gt;
+&lt;li&gt;$Z = {...,-2,-1,0,1,2...}$, 整数集&lt;/li&gt;
+&lt;li&gt;$Q = {q | q = a/b, a,b\in Z, b \ne 0 }$, 有理数集&lt;/li&gt;
+&lt;li&gt;$Q^+ = {q | q \in Q, q &amp;gt; 0 }$, 正有理数集&lt;/li&gt;
+&lt;li&gt;$R$, 实数集&lt;/li&gt;
+&lt;li&gt;$R^+$, 正实数集&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;给定一个对象集合（一个集合），我们可能想知道这个集合有多大：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.3 (设置基数).&lt;/strong&gt;  集合 A 的基数是 A 中（不同的）对象的数量，写为 $|A|$。 当 $|A| \in N$（一个有限整数），A是一个有限集； 否则 A 是无限集。 我们稍后讨论无限集的基数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例 1.4:&lt;/strong&gt; $|\lbrace1,2,3\rbrace| = |\lbrace1,2,\lbrace1,2\rbrace \rbrace| = 3$&lt;/p&gt;
+&lt;p&gt;给定两个对象集合（两个集合），我们可能想知道它们是否相等，或者一个集合是否包含另一个。 这些概念被形式化为集合相等和子集：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.5 (设置相等).&lt;/strong&gt; 两个集合 $S$ 和 $T$ 相等，写成 $S = T$，如果 $S$ 和 $T$ 包含完全相同的元素，即对于每个 $x,x\in T \harr x \in T$。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.6 (子集)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;集合 $S$ 是集合 $T$ 的子集，写成 $S \subseteq T$，如果 $S$ 中的每个元素也在 $T$ 中，即对于每个 $x,x \in S \to x \in T$。&lt;/p&gt;
+&lt;p&gt;集合 $S$ 是 $T$ 的严格子集，写成 作为 $S \subset T$, 如果 $s \subseteq T$ ，并且存在一些元素 $x \in T, x \notin S$。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例子1.7.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;最后，是时候对集合进行形式化操作了。 给定两个对象集合，我们可能希望:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;合并集合 &lt;strong&gt;(set union)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;识别公共对象 &lt;strong&gt;(set intersection)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;或识别一个集合唯一的对象 &lt;strong&gt;(set difference)&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;我们可能还想知道从每个集合中挑选一个对象的所有可能方法 &lt;strong&gt;(Cartesian product)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;或者从一个集合中挑选一些对象的所有可能方法 &lt;strong&gt;(power set)&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;定义1.8 (集合操作):&lt;/strong&gt; 给定集合 $S$ 和 $T$，我们定义以下操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Power Sets. $P(S)$ 是 $S$ 所有子集的集合&lt;/li&gt;
+&lt;li&gt;Cartesian Product. $S \times T = \lbrace(s, t) | s \in S, t \in T\rbrace.$&lt;/li&gt;
+&lt;li&gt;Union. $S \cup T = \lbrace x | x \in S \text{ or } x \in T\rbrace$, 元素在集合 $S$ 或 $T$.&lt;/li&gt;
+&lt;li&gt;Intersection. $S \cap T = \lbrace x | x \in S, x \in T\rbrace$, 元素在集合 $S$ 和 $T$.&lt;/li&gt;
+&lt;li&gt;Difference. $S − T = \lbrace x | x \in S, x \notin T\rbrace$,  元素在集合 $S$ 但不在集合 $T$&lt;/li&gt;
+&lt;li&gt;Complements. $S = \lbrace x | x \notin S\rbrace$, 元素不在集合 $S$. 仅当我们有一个隐含的全集对象 $U$ 才有意义, 例如. $S = \lbrace x | x ∈ U, x \notin S\rbrace$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;例 1.9.&lt;/strong&gt;  设 $S = \lbrace 1, 2, 3 \rbrace，T = \lbrace 3, 4\rbrace，V = \lbrace a, b\rbrace$。 然后：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$P(T) = \lbrace \emptyset, \lbrace3\rbrace, \lbrace4\rbrace, \lbrace3, 4\rbrace \rbrace$&lt;/li&gt;
+&lt;li&gt;$S \times V = \lbrace (1, a),(1, b),(2, a),(2, b),(3, a),(3, b) \rbrace$&lt;/li&gt;
+&lt;li&gt;$S \cup T = \lbrace 1, 2, 3, 4 \rbrace$&lt;/li&gt;
+&lt;li&gt;$S \cap T = \lbrace3\rbrace$&lt;/li&gt;
+&lt;li&gt;$S − T = \lbrace 1, 2\rbrace$&lt;/li&gt;
+&lt;li&gt;如果我们正在处理所有整数的集合，$\overline{S} = \lbrace ..., -2, -1, 0, 4, 5, ...\rbrace$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一些集合操作可以使用维恩图进行可视化。 见图 1.1。 要给出使用这些集合操作的示例，请考虑以下集合标识。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../figure-1.1.png&#34; alt=&#34;图1.1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;定理 1.10。 对于所有集合 $S$ 和 $T$，$S = (S \cap T) \cup (S − T)$&lt;/p&gt;
+&lt;p&gt;证明。 我们可以使用维恩图（见图 1.1b 和 1.1c）可视化集合标识。 为了正式证明身份，我们将展示以下两个：&lt;/p&gt;
+&lt;p&gt;$$\tag{1.1}S \subseteq (S \cap T) \cup (S − T)$$&lt;/p&gt;
+&lt;p&gt;$$\tag{1.2}(S \cap T) \cup (S − T) \subseteq S$$&lt;/p&gt;
+&lt;p&gt;为了证明 (1.1), 考虑任何元素 $x \in S$。 $x \in T$ 或 $x \notin T$.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果$x \in T$, 则 $x \in S \cap T$，因此 $x \in (S \cap T) \cup (S − T)$.&lt;/li&gt;
+&lt;li&gt;如果 $x \notin T$, 则 $x \in (S − T)$，因此 $x \in (S \cap T) \cup (S − T)$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为了证明 (1.2), 考虑任何 $x \in (S \cap T) \cup (S − T)$。 $x \in S \cap T$ 或 $x \in S − T$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果 $x \in S \cap T$, 则 $x \in S$&lt;/li&gt;
+&lt;li&gt;如果 $x \in S - T$, 则 $x \in S$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在计算机科学中，我们经常使用以下附加符号 (这些符号可以被视为简写):&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.11.&lt;/strong&gt;  给定一个集合 $S$ 和一个自然数 $n \in N$，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S^n$ 是具有字母 $S$ 的长度为 $n$ 个“字符串” (相当于 $n$ 元组) 的集合。正式我们将其定义为 $S$ 的 $n$ 个副本的乘积 (即 $S \times S \times ... \times S$).&lt;/li&gt;
+&lt;li&gt;$S^∗$ 是带有字母 $S$ 的有限长度“字符串”的集合。正式我们将其定义为 $S^0 \cup S^1 \cup S^2 \cup...$  的并集，其中 $S^0$ 是一个只包含一个元素的集合：空字符串（或空元组“ $()$ ”）。&lt;/li&gt;
+&lt;li&gt;$[n]$ 是集合 $\lbrace0, 1, ... , n − 1\rbrace$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常见的集合包括 $\lbrace0, 1\rbrace^n$ 作为n位串的集合，以及 $\lbrace 0, 1 \rbrace^*$ 作为有限长度位串的集合。 还要注意 $|[n]| = n$。&lt;/p&gt;
+&lt;p&gt;在结束本节之前，让我们回顾一下我们对集合的非正式定义：对象的无序 “collection”。 1901 年，Russel 提出了以下 “set”，称为 $\text{Russel’s paradox}^1$：&lt;/p&gt;
+&lt;p&gt;$$S = \lbrace x | x \notin x\rbrace$$&lt;/p&gt;
+&lt;p&gt;也就是说, $S$ 是所有不包含自己作为元素的集合的集合。. 这似乎是一个自然的 “collection”, 但 $S \in S$ 吗?  不难看出, $S \in S \harr S \notin S$. 今天的结论是, $S$ 不是一个好的对象 “collection”; 它不是 set.&lt;/p&gt;
+&lt;p&gt;那么如何知道  $\lbrace x | x \text{ satisfies some condition}\rbrace$ 是一个集合？ 形式上，可以公理地定义集合，其中只有从仔细的规则列表构造的集合才被视为集合。 这超出了本课程的范围。 我们将走捷径，将注意力集中在一个行为良好的 $U$  上。 令 $E$ 为我们感兴趣的所有对象（数字、字母等），令 $U = E\cup P(E) \cup P(P(E))$，即 $E$，$E$ 的子集和 $E$ 子集的子集 . 事实上，我们可以用三个幂集运算来扩展 $U$，或者实际上是任何有限数量的幂集运算。 那么，$S = \lbrace x | x \in U \text{ and some conditons holds} \rbrace$ 总是一个集合。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://algebra2k.github.io/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" term="离散数学" label="离散数学" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">并发  </title>
+            <link rel="alternate" type="text/html" href="https://algebra2k.github.io/teachs/mastering-rust/08-concurrency/" />
+            <id>https://algebra2k.github.io/teachs/mastering-rust/08-concurrency/</id>
+            <updated>2021-12-23T15:15:59&#43;08:00</updated>
+            <published>2019-06-17T00:00:00&#43;00:00</published>
+            <author>
+                    <name>jackson</name>
+                    <uri>https://algebra2k.github.io/</uri>
+                    <email>jackson.cloudnative@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">计算机即使在CPU Core下, 可以通过指令模拟并发, 指令可以在时间段内彼此重叠. 在这……</summary>
+            
+                <content type="html">&lt;p&gt;计算机即使在CPU Core下, 可以通过指令模拟并发, 指令可以在时间段内彼此重叠.&lt;/p&gt;
+&lt;p&gt;在这个模型中，除非它们需要共享或协调某些数据，否则指令不需要彼此等待，并且几乎可以同时运行.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注: 通常来说, 编译器会对生成的指令做优化, 允许指令重排, 以更好的利用CPU, 两条指令之间有先后关系, 一般使用 violate 组织编译器对指令重排, 相应的CPU也不会让指令并发执行.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-并发&#34;&gt;1. 并发&lt;/h2&gt;
+&lt;h3 id=&#34;1-并行和并发&#34;&gt;1. 并行和并发&lt;/h3&gt;
+&lt;p&gt;并行是指每个任务在独立的CPU内核上同步运行，并且没有重叠的时间段.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注: 若两个进程的指令在时间段上有重叠, 则是并发而非并行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;../08-1.png&#34; alt=&#34;并发和并行&#34;&gt;&lt;/p&gt;
+&lt;p&gt;换句话说，并发和构建同时管理多个事务的程序有关，而并行是指将该程序交给多个内核处理，以增加它在一定时间内完成的工作量。&lt;/p&gt;
+&lt;p&gt;通过这个定义，可以发现正确地遵循并发规则后，程序能够更高效地使用CPU；而并行可能并非在所有情况下都能付诸实践，如果你的程序并行运行，但只处理一个特定任务，那么吞吐量并不高。也就是说，当并发程序在多核硬件上运行时，我们能够两全其美。&lt;/p&gt;
+&lt;h3 id=&#34;2-基于进程的并发方法&#34;&gt;2. 基于进程的并发方法&lt;/h3&gt;
+&lt;p&gt;基于并发的进程为你提供了诸如故障隔离之类的功能，但也存在启动整个新进程的开销.&lt;/p&gt;
+&lt;h3 id=&#34;3-rust-移除了绿色线程&#34;&gt;3. Rust 移除了绿色线程&lt;/h3&gt;
+&lt;p&gt;Rust在其1.0版本之前有绿色线程，但是在Rust发布稳定版之前它们就被移除了。包含绿色线程将违反Rust的“承诺”和运行时零成本原则。&lt;/p&gt;
+&lt;h3 id=&#34;4-程序做并发的步骤&#34;&gt;4. 程序做并发的步骤&lt;/h3&gt;
+&lt;p&gt;在程序中利用并发需要遵循多个步骤。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;(识别并发) 识别并发的部分或拆分并发单位:&lt;/strong&gt; 首先，我们需要识别出任务中能够独立运行的部分。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;(并发单位调度)&lt;/strong&gt; &lt;strong&gt;根据拆分的并发单位, 找到一种最好的调度方法:&lt;/strong&gt; 其次，我们需要找到协调线程的方法，这些线程被拆分为多个子任务一起实现共同的目标。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;(并发的模式)&lt;/strong&gt; &lt;strong&gt;并发下的模式, 比如共享数据:&lt;/strong&gt; 在此过程中，线程可能还需要共享数据，并且需要同步才能访问或写入共享数据。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在享受并发带来的所有好处的同时，开发者需要关注和面对一系列新的挑战和范式。&lt;/p&gt;
+&lt;h3 id=&#34;5-并发缺陷&#34;&gt;5. 并发缺陷&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;条件竞争: 读取、写入、修改操作不是原子的则会遇到条件竞争&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据竞争: 当多个线程尝试将数据写入内存的某个位置，并且当两个线程同时对上述位置执行写入时&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;内存不安全和未定义行为&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;死锁&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../08-2.png&#34; alt=&#34;死锁&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-rust-的并发&#34;&gt;2. Rust 的并发&lt;/h2&gt;
+&lt;h3 id=&#34;1-自定义线程-stdthreadbuilder&#34;&gt;1. 自定义线程 std::thread::Builder&lt;/h3&gt;
+&lt;script src=&#34;https://gist.github.com/rust-play/a95ee180e786540c9d599702c0235a9e.js&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;2-线程并发模型&#34;&gt;2. 线程并发模型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;actix软件包中实现为程序库的actor模型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;rayon软件包实现的工作窃取（work stealing）并发模型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;crossbeam软件包实现的模型，它们允许并发线程从其父堆栈帧上共享数据，并保证在父堆栈被释放之前返回。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;parking_lot是另一个程序库，它提供了比标准库中现存的并发原语效率更高的替代方案&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;状态共享模型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Arc 可以共享类型所有权, 但不能修改&lt;/li&gt;
+&lt;li&gt;Mutex 提供多个线程共享类型所有权, 但不提供共享可变性, 仅提供单个线程的共享可变性&lt;/li&gt;
+&lt;li&gt;Arc + Mutex 可以提供多个线程的共享可变性&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;script src=&#34;https://gist.github.com/rust-play/dcfeb482113192a458043eddb2f05453.js&#34;&gt;&lt;/script&gt;
+&lt;ul&gt;
+&lt;li&gt;RwLock会遇到写入者饥饿问题。这种情况是因为读取者不断访问共享资源，从而导致写入者线程永远没有机会访问共享资源。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;消息通信模型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;标准库中的std::sync::mpsc模块提供了一个无锁定的多生产者、单订阅者（消费者）队列，以此作为希望彼此通信的线程的共享消息队列&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;channel 异步、无界缓冲&lt;/p&gt;
+  &lt;script src=&#34;https://gist.github.com/rust-play/4244d3c2a15c2a6c286c8e07b4d0478c.js&#34;&gt;&lt;/script&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sync_channel 同步、有界缓冲&lt;/p&gt;
+  &lt;script src=&#34;https://gist.github.com/rust-play/ac7b9f86ac1e62358dfdf5df69a12597.js&#34;&gt;&lt;/script&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sender&lt;T&gt;是一种复制类型，这意味着它可以切换到多个线程中，允许它们将消息发送到共享队列&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-rust-线程安全&#34;&gt;3. Rust 线程安全&lt;/h2&gt;
+&lt;h3 id=&#34;1-spawn-签名&#34;&gt;1. spawn 签名&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Rust 通过trait maker 防止数据竞争, 大多数线程安全位都已经嵌入spawn函数的类型签名中。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;spawn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;: &lt;span class=&#34;nc&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&amp;gt; &lt;span class=&#34;nc&#34;&gt;JoinHandle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;where&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;F&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;FnOnce&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&amp;gt; &lt;span class=&#34;nc&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;F&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Send&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;Send&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;F:FnOnce() -&amp;gt; T&lt;/code&gt;：这表示F实现了一个只能被调用一次的闭包。换句话说，f是一个闭包，通过值获取所有内容并移动从环境中引用的项。&lt;/li&gt;
+&lt;li&gt;F:Send + &#39;static：闭包函数 FnOnce 需要是move , 静态生命周期&lt;/li&gt;
+&lt;li&gt;T: Send + &#39;static：闭包的返回类型T必须实现Send+&#39;static特征&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;闭包函数内部的值可以是ref 或 move的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2--send--trait&#34;&gt;2.  Send  trait&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;unsafe&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;auto&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;trait&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Send&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Send类型可以安全地发送到多个线程，这表明该类型是一种移动类型。&lt;/p&gt;
+&lt;p&gt;非Send类型的是指针类型，例如&amp;amp;T，除非T是Sync类型。&lt;/p&gt;
+&lt;p&gt;以auto关键字作为前缀，因为它适用于大多数类型的隐式实现&lt;/p&gt;
+&lt;h3 id=&#34;3-sync-trait&#34;&gt;3. Sync trait&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;unsafe&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;auto&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;trait&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Sync&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果某些类型是Sync类型，那么指向它的引用，换句话说相关的&amp;amp;T是Send类型。这意味着我们可以将对它的引用传递给多线程。&lt;/p&gt;
+&lt;h1 id=&#34;4-actor-模型&#34;&gt;4. actor 模型&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dependencies&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;actix&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0.7.9&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;futures&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0.1.25&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tokio&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0.1.15&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;script src=&#34;https://gist.github.com/rust-play/8de151e22d3eb5370183f58fe6727bfd.js&#34;&gt;&lt;/script&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://algebra2k.github.io/tags/rust/" term="rust" label="rust" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>
