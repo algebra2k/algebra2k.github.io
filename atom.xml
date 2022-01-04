@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">jackson</title>
     <subtitle type="html"></subtitle>
-    <updated>2021-12-23T15:16:05&#43;08:00</updated>
+    <updated>2022-01-04T10:39:39&#43;08:00</updated>
     <id>https://algebra2k.github.io/</id>
     <link rel="alternate" type="text/html" href="https://algebra2k.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://algebra2k.github.io/atom.xml" />
@@ -16,6 +16,54 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.91.0">Hugo</generator>
+        <entry>
+            <title type="text"> Introduction  </title>
+            <link rel="alternate" type="text/html" href="https://algebra2k.github.io/teachs/modern-btree-techniques/-01-introduction/" />
+            <id>https://algebra2k.github.io/teachs/modern-btree-techniques/-01-introduction/</id>
+            <updated>2021-12-29T17:16:00&#43;08:00</updated>
+            <published>2021-10-17T00:00:00&#43;00:00</published>
+            <author>
+                    <name>jackson</name>
+                    <uri>https://algebra2k.github.io/</uri>
+                    <email>jackson.cloudnative@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">1. B-tree 的观点</summary>
+            
+                <content type="html">&lt;h2 id=&#34;1-b-tree-的观点&#34;&gt;1. B-tree 的观点&lt;/h2&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://algebra2k.github.io/tags/data-structure/" term="Data Structure" label="Data Structure" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://algebra2k.github.io/tags/b-tree/" term="B-Tree" label="B-Tree" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://algebra2k.github.io/tags/database-system/" term="Database System" label="Database System" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">1.2 Relations</title>
             <link rel="alternate" type="text/html" href="https://algebra2k.github.io/teachs/a-course-in-discrete-structures/1-2-relational/" />
