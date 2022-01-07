@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 04 Jan 2022 18:11:13 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 07 Jan 2022 18:03:34 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://algebra2k.github.io/rss.xml" />
         
@@ -120,6 +120,38 @@
 &lt;li&gt;$Parity = \lbrace(x, y) | x, y \text{ are both even or are both odd}\rbrace$ a relation on integers&lt;/li&gt;
 &lt;/ul&gt;
 </description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://algebra2k.github.io/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">离散数学</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>2.1 Basic Proof Techniques</title>
+                <link>https://algebra2k.github.io/teachs/a-course-in-discrete-structures/2-1-basic-proof-techniques/</link>
+                <guid isPermaLink="true">https://algebra2k.github.io/teachs/a-course-in-discrete-structures/2-1-basic-proof-techniques/</guid>
+                <pubDate>Mon, 02 Mar 2020 00:00:00 &#43;0000</pubDate>
+                
+                    <author>jackson.cloudnative@gmail.com (jackson)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description></description>
                 
                 
                 
